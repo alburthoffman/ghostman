@@ -1,0 +1,13 @@
+language: go
+go:
+  - 1.8.x
+  - 1.9.x
+  - 1.10.x
+  - tip
+env:
+  - GOMAXPROCS=4 GORACE=halt_on_error=1
+install:
+  - go get github.com/op/go-logging
+  - go get gopkg.in/alecthomas/kingpin.v2
+script:
+  - go test -race -v ./...
