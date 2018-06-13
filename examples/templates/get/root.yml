@@ -1,0 +1,7 @@
+metadata:
+  usage: access /
+
+attributes:
+  protocol: http
+  port: 80
+  url: /

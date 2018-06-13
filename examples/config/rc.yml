@@ -1,0 +1,3 @@
+runtime:
+  templateDir: examples/templates
+  maxConcurrent: 2000
