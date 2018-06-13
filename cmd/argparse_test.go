@@ -10,5 +10,5 @@ func ExampleListCommands() {
 	fmt.Printf("%v", cmds["get"]["root"])
 
 	// Output:
-	// &{{access /} { } {http 80  / } {}}
+	// &{{access /} {http 80  / } {} [map[Accept-Language:en-US] map[Cache-Control:no-store]]}
 }

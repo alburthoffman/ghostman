@@ -12,10 +12,7 @@ type Metadata struct {
 	Usage string `yaml:"usage"`
 }
 
-type Headers struct {
-	CT   string `yaml:"content-type,omitempty"`
-	Auth string `yaml:"authorization,omitempty"`
-}
+type Header map[string]string
 
 type Attributes struct {
 	Protc  string `yaml:"protocol"`
@@ -29,9 +26,9 @@ type Defaults struct{}
 
 type Template struct {
 	Metadata
-	Headers
 	Attributes
 	Defaults
+	Headers []Header
 }
 
 func ParseTemplate(f string) *Template {

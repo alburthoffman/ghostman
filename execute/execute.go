@@ -16,19 +16,23 @@ func Execute(req *request.Request) *response.Response {
 
 	res := response.Response{}
 	res.Request = *req
-	// baseres := BaseResponse{}
 	res.StatusCode = -1
 
 	bodybyte := []byte(req.Body)
 	httpreq, err := http.NewRequest(req.Method, req.Geturi(), bytes.NewBuffer(bodybyte))
 
 	// set Header
-	if req.CT != "" {
-		httpreq.Header.Set("Content-Type", req.CT)
+	for _, headermap := range req.Headers {
+		for k, v := range headermap {
+			httpreq.Header.Set(k, v)
+		}
 	}
-	if req.Auth != "" {
-		httpreq.Header.Set("Authorization", req.Auth)
-	}
+	// if req.CT != "" {
+	// 	httpreq.Header.Set("Content-Type", req.CT)
+	// }
+	// if req.Auth != "" {
+	// 	httpreq.Header.Set("Authorization", req.Auth)
+	// }
 
 	resp, err := utils.HttpClient.Do(httpreq)
 

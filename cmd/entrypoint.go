@@ -36,7 +36,6 @@ func Entrypoint() {
 	case runCmd.FullCommand():
 		run(cmds)
 	}
-
 }
 
 func run(cmds FullCommands) {

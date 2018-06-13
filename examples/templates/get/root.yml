@@ -1,6 +1,10 @@
 metadata:
   usage: access /
 
+headers:
+  - Accept-Language: en-US
+  - Cache-Control: no-store
+
 attributes:
   protocol: http
   port: 80

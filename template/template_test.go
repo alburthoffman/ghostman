@@ -10,6 +10,7 @@ func ExampleParseTemplate() {
 	fmt.Println(tmpl.Usage)
 	fmt.Println(tmpl.Url)
 	fmt.Println(tmpl.Protc)
+	fmt.Println(tmpl.Headers)
 	fmt.Println(tmpl.Port)
 	fmt.Println(tmpl.Body)
 
@@ -17,6 +18,7 @@ func ExampleParseTemplate() {
 	// access /
 	// /
 	// http
+	// [map[Accept-Language:en-US] map[Cache-Control:no-store]]
 	// 80
 	//
 }
