@@ -1,4 +1,4 @@
-# ghostman
+# ghostman [![Build Status](https://travis-ci.org/newly12/ghostman.svg?branch=master)](https://travis-ci.org/newly12/ghostman)
 
 concurrent and template based curl written in golang
 
