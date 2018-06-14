@@ -49,7 +49,7 @@ func run(cmds FullCommands) {
 
 	// create channels
 	log.Debug("creating channels")
-	reqChan := make(chan request.Request, defaults.MaxConcur)
+	reqChan := make(chan *request.Request, defaults.MaxConcur)
 	resChan := make(chan *response.Response, defaults.MaxConcur)
 
 	// generate requests
@@ -59,7 +59,7 @@ func run(cmds FullCommands) {
 	// execute
 	go func() {
 		for _, request := range requests {
-			reqChan <- request
+			reqChan <- &request
 		}
 		close(reqChan)
 	}()
@@ -79,9 +79,9 @@ func run(cmds FullCommands) {
 	log.Debug("process request channel")
 	for req := range reqChan {
 		wg.Add(1)
-		go func(req request.Request) {
+		go func(req *request.Request) {
 			defer wg.Done()
-			resChan <- execute.Execute(&req)
+			resChan <- execute.Execute(req)
 		}(req)
 	}
 

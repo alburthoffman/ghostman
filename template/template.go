@@ -18,7 +18,7 @@ type Attributes struct {
 	Protc  string `yaml:"protocol"`
 	Port   int    `ymal:"port"`
 	Method string `yaml:"method,omitempty"`
-	Url    string `yaml:"url"`
+	Uri    string `yaml:"uri"`
 	Body   string `yaml:"body"`
 }
 
