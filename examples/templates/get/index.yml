@@ -8,4 +8,4 @@ headers:
 attributes:
   protocol: http
   port: 80
-  url: /
+  uri: /
