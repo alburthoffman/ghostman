@@ -37,7 +37,7 @@ func Execute(req *request.Request) *response.Response {
 	resp, err := utils.HttpClient.Do(httpreq)
 
 	if err != nil {
-		log.Error("got error: %s", err)
+		log.Errorf("Got error: %s", err)
 		res.Body = err.Error()
 		return &res
 	}

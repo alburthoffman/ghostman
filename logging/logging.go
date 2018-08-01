@@ -1,9 +1,8 @@
 package logging
 
 import (
-	"os"
-
 	"github.com/op/go-logging"
+	"os"
 )
 
 var Log = logging.MustGetLogger("ghostman")

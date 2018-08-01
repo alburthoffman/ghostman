@@ -7,7 +7,7 @@ import (
 
 func ExampleListCommands() {
 	cmds := *(cmd.ListCommands("../examples/templates"))
-	fmt.Printf("%v", cmds["get"]["root"])
+	fmt.Printf("%v", cmds["get"]["index"])
 
 	// Output:
 	// &{{access /} {http 80  / } {} [map[Accept-Language:en-US] map[Cache-Control:no-store]]}

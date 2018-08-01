@@ -6,9 +6,9 @@ import (
 )
 
 func ExampleParseTemplate() {
-	tmpl := template.ParseTemplate("../examples/templates/get/root.yml")
+	tmpl := template.ParseTemplate("../examples/templates/get/index.yml")
 	fmt.Println(tmpl.Usage)
-	fmt.Println(tmpl.Url)
+	fmt.Println(tmpl.Uri)
 	fmt.Println(tmpl.Protc)
 	fmt.Println(tmpl.Headers)
 	fmt.Println(tmpl.Port)
